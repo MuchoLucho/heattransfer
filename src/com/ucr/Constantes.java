@@ -5,18 +5,18 @@ public class Constantes {
     private static double DIFU_TERM_ACER = 0.0000188;
     private static double LADO_PLACA = 0.05;
     private static double DIST_NODAL = 0.0005;
-    private static int TEMP_INF = 300;
-    private static int TEMP_COB = 600;
-    private static int TEMP_ACER_IZQ = 1100;
-    private static int TEMP_ACER_CENT = 950;
-    private static int TEMP_ACER_DER = 800;
+    private static double TEMP_INF = 300;
+    private static double TEMP_COB = 600;
+    private static double TEMP_ACER_IZQ = 1100;
+    private static double TEMP_ACER_CENT = 950;
+    private static double TEMP_ACER_DER = 800;
     private static int COEF_CONV = 13;
     private static double RESIS_SOLDA = 0.00002;
     private static int COND_TERM_COBR = 401;
     private static double COND_TERM_ACER = 63.9;
     private static int TIEMPO = 20;
-    private static double DELTA_T_COBRE = 0.00053417937;
-    private static double DELTA_T_ACERO = 0.00332412995;
+    private static double DELTA_T_COBRE = 0.000053417937;
+    private static double DELTA_T_ACERO = 0.000332412995;
 
     public static double getDeltaTCobre() {
         return DELTA_T_COBRE;
@@ -42,29 +42,20 @@ public class Constantes {
         return COND_TERM_ACER;
     }
 
-
     static double getDIFU_TERM_COB() {
         return DIFU_TERM_COB;
-    }
-
-    public static void setDIFU_TERM_COB(double DIFU_TERM_COB) {
-        Constantes.DIFU_TERM_COB = DIFU_TERM_COB;
     }
 
     static double getDIFU_TERM_ACER() {
         return DIFU_TERM_ACER;
     }
 
-    public static void setDIFU_TERM_ACER(double DIFU_TERM_ACER) {
-        Constantes.DIFU_TERM_ACER = DIFU_TERM_ACER;
-    }
-
-    public static double getANCHO_COB() {
+    public static double getLADO_PLACA() {
         return LADO_PLACA;
     }
 
-    public static void setANCHO_COB(double ANCHO_COB) {
-        Constantes.LADO_PLACA = ANCHO_COB;
+    public static void setLADO_PLACA(double LADO_PLACA) {
+        Constantes.LADO_PLACA = LADO_PLACA;
     }
 
     static double getDIST_NODAL() {
@@ -75,43 +66,43 @@ public class Constantes {
         Constantes.DIST_NODAL = DIST_NODAL;
     }
 
-    static int getTEMP_INF() {
+    static double getTEMP_INF() {
         return TEMP_INF;
     }
 
-    public static void setTEMP_INF(int TEMP_INF) {
+    public static void setTEMP_INF(double TEMP_INF) {
         Constantes.TEMP_INF = TEMP_INF;
     }
 
-    static int getTEMP_COB() {
+    static double getTEMP_COB() {
         return TEMP_COB;
     }
 
-    public static void setTEMP_COB(int TEMP_COB) {
+    public static void setTEMP_COB(double TEMP_COB) {
         Constantes.TEMP_COB = TEMP_COB;
     }
 
-    static int getTEMP_ACER_IZQ() {
+    static double getTEMP_ACER_IZQ() {
         return TEMP_ACER_IZQ;
     }
 
-    public static void setTEMP_ACER_IZQ(int TEMP_ACER_IZQ) {
+    public static void setTEMP_ACER_IZQ(double TEMP_ACER_IZQ) {
         Constantes.TEMP_ACER_IZQ = TEMP_ACER_IZQ;
     }
 
-    static int getTEMP_ACER_CENT() {
+    static double getTEMP_ACER_CENT() {
         return TEMP_ACER_CENT;
     }
 
-    public static void setTEMP_ACER_CENT(int TEMP_ACER_CENT) {
+    public static void setTEMP_ACER_CENT(double TEMP_ACER_CENT) {
         Constantes.TEMP_ACER_CENT = TEMP_ACER_CENT;
     }
 
-    static int getTEMP_ACER_DER() {
+    static double getTEMP_ACER_DER() {
         return TEMP_ACER_DER;
     }
 
-    public static void setTEMP_ACER_DER(int TEMP_ACER_DER) {
+    public static void setTEMP_ACER_DER(double TEMP_ACER_DER) {
         Constantes.TEMP_ACER_DER = TEMP_ACER_DER;
     }
 
@@ -119,16 +110,8 @@ public class Constantes {
         return COEF_CONV;
     }
 
-    public static void setCOEF_CONV(int COEF_CONV) {
-        Constantes.COEF_CONV = COEF_CONV;
-    }
-
     static double getRESIS_SOLDA() {
         return RESIS_SOLDA;
-    }
-
-    public static void setRESIS_SOLDA(int RESIS_SOLDA) {
-        Constantes.RESIS_SOLDA = RESIS_SOLDA;
     }
 
     public static int getTIEMPO() {

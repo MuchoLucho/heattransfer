@@ -1,31 +1,28 @@
 package com.ucr;
 
-public class Placa {
+class Placa {
 
     private double matriz [][];
 
-    public void printer(){
+    void printer(){
         for (double[] doubles : this.matriz) {
-            for (int j = 0; j < doubles.length; j++) {
-                System.out.print(String.format("%.3f", doubles[j])+ " ");
+            for (double aDouble : doubles) {
+                System.out.print(String.format("%.3f", aDouble) + " ");
+                //System.out.print(aDouble + " ");
             }
             System.out.println();
         }
     }
 
-    public double getValue (int x, int y){
+    double getValue(int x, int y){
         return this.matriz[y][x];
     }
 
-    public double setValue (int x, int y, double value){
-        return this.matriz[y][x] = value;
+    void setValue(int x, int y, double value){
+        this.matriz[y][x] = value;
     }
 
-    public boolean esCobre(int pos){
-        return pos < this.matriz[0].length/2;
-    }
-
-    protected void placaSegundo0() {
+    void placaSegundo0() {
         this.matriz = new double [Constantes.getCANT_NODOS_Y()][Constantes.getCANT_NODOS_X()];
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz[i].length; j++) {
@@ -43,7 +40,7 @@ public class Placa {
         }
     }
 
-    protected Placa() {
+    Placa() {
         this.matriz = new double [Constantes.getCANT_NODOS_Y()][Constantes.getCANT_NODOS_X()];
     }
 

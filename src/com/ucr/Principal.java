@@ -1,5 +1,6 @@
 package com.ucr;
 
+import javax.swing.*;
 import java.util.ArrayList;
 
 public class Principal {
@@ -31,40 +32,37 @@ public class Principal {
     }
 
     public double getT_ESQ_SUP_IZQ_COB(int segundo){
-        double value = (2 * this.getTauCobre()
+        return (2 * this.getTauCobre()
                 * ((snapshot.get(segundo-1).getValue(1,0))
                 + (snapshot.get(segundo-1).getValue(0,1))
                 + 2 * Constantes.getTEMP_INF() * (Constantes.getCOEF_CONV()*Constantes.getDIST_NODAL())/Constantes.getCOND_TERM_COBR())
                 + (snapshot.get(segundo-1).getValue(0,0) * (1 - 4 * this.getTauCobre()
                 -4*this.getTauCobre()*(Constantes.getCOEF_CONV()*Constantes.getDIST_NODAL())/Constantes.getCOND_TERM_COBR()))
         );
-        return value;
     }
 
     public double getT_BORD_IZQ_COB(int segundo, int y){
-        double value = (this.getTauCobre()
+        return (this.getTauCobre()
                 * (2*(snapshot.get(segundo-1).getValue(1,y))
                 + (snapshot.get(segundo-1).getValue(0,y+1)) + (snapshot.get(segundo-1).getValue(0,y-1))
                 + 2 * Constantes.getTEMP_INF() * (Constantes.getCOEF_CONV()*Constantes.getDIST_NODAL())/Constantes.getCOND_TERM_COBR())
                 + (snapshot.get(segundo-1).getValue(0,y) * (1 - 4 * this.getTauCobre()
                 -2*this.getTauCobre()*(Constantes.getCOEF_CONV()*Constantes.getDIST_NODAL())/Constantes.getCOND_TERM_COBR()))
         );
-        return value;
     }
 
     public double getT_ESQ_INF_IZQ_COB(int segundo){
-        double value = (2 * this.getTauCobre()
+        return (2 * this.getTauCobre()
                 * ((snapshot.get(segundo-1).getValue(1,Constantes.getCANT_NODOS_Y()-1))
                 + (snapshot.get(segundo-1).getValue(0,Constantes.getCANT_NODOS_Y()-2))
                 + 2 * Constantes.getTEMP_INF() * (Constantes.getCOEF_CONV()*Constantes.getDIST_NODAL())/Constantes.getCOND_TERM_COBR())
                 + (snapshot.get(segundo-1).getValue(0,Constantes.getCANT_NODOS_Y()-1) * (1 - 4 * this.getTauCobre()
                 -4*this.getTauCobre()*(Constantes.getCOEF_CONV()*Constantes.getDIST_NODAL())/Constantes.getCOND_TERM_COBR()))
         );
-        return value;
     }
 
     public double getT_BORD_SUP_COB(int segundo, int x){
-        double value = (this.getTauCobre()
+        return (this.getTauCobre()
                 * ((snapshot.get(segundo-1).getValue(x-1,0))
                 + (snapshot.get(segundo-1).getValue(x+1,0))
                 + 2 * (snapshot.get(segundo-1).getValue(x,1))
@@ -72,11 +70,10 @@ public class Principal {
                 + (snapshot.get(segundo-1).getValue(x,0) * (1 - 4 * this.getTauCobre()
                 -2*this.getTauCobre()*(Constantes.getCOEF_CONV()*Constantes.getDIST_NODAL())/Constantes.getCOND_TERM_COBR()))
         );
-        return value;
     }
 
     public double getT_CENTR_COB(int segundo, int x, int y){
-        double value = (this.getTauCobre()
+        return (this.getTauCobre()
                 * ((snapshot.get(segundo-1).getValue(x,y-1))
                 + (snapshot.get(segundo-1).getValue(x+1,y))
                 + (snapshot.get(segundo-1).getValue(x,y+1))
@@ -84,11 +81,10 @@ public class Principal {
                 + (snapshot.get(segundo-1).getValue(x,y) * (1 - 4 * this.getTauCobre()))
 
         );
-        return value;
     }
 
     public double getT_BORD_INF_COB(int segundo, int x){
-        double value = (this.getTauCobre()
+        return (this.getTauCobre()
                 * ((snapshot.get(segundo-1).getValue(x-1,Constantes.getCANT_NODOS_Y()-1))
                 + (snapshot.get(segundo-1).getValue(x+1,Constantes.getCANT_NODOS_Y()-1))
                 + 2 * (snapshot.get(segundo-1).getValue(x,Constantes.getCANT_NODOS_Y()-2))
@@ -96,11 +92,10 @@ public class Principal {
                 + (snapshot.get(segundo-1).getValue(x,Constantes.getCANT_NODOS_Y()-1) * (1 - 4 * this.getTauCobre()
                 -2 * this.getTauCobre()*(Constantes.getCOEF_CONV()*Constantes.getDIST_NODAL())/Constantes.getCOND_TERM_COBR()))
         );
-        return value;
     }
 
     public double getT_ESQ_SUP_DER_COB(int segundo){
-        double value = (2 * this.getTauCobre()
+        return (2 * this.getTauCobre()
                 * ((snapshot.get(segundo-1).getValue((Constantes.getCANT_NODOS_X()/2)-1,0))
                 + (snapshot.get(segundo-1).getValue(Constantes.getCANT_NODOS_X()/2,1))
                 + 2 * (snapshot.get(segundo-1).getValue((Constantes.getCANT_NODOS_X()/2)+1,0))* this.getBiot(true)
@@ -108,11 +103,10 @@ public class Principal {
                 + (snapshot.get(segundo-1).getValue(Constantes.getCANT_NODOS_X()/2,0) * (1 - 4 * this.getTauCobre()
                 -4 * this.getTauCobre()*( this.getBiot(true))))
         );
-        return value;
     }
 
     public double getT_BORD_DER_COB(int segundo, int y){
-        double value = (this.getTauCobre()
+        return (this.getTauCobre()
                 * ((snapshot.get(segundo-1).getValue((Constantes.getCANT_NODOS_X()/2),y-1))
                 + 2 * (snapshot.get(segundo-1).getValue((Constantes.getCANT_NODOS_X()/2)-1,y))
                 + (snapshot.get(segundo-1).getValue((Constantes.getCANT_NODOS_X()/2),y+1))
@@ -120,11 +114,10 @@ public class Principal {
                 + (snapshot.get(segundo-1).getValue(Constantes.getCANT_NODOS_X()/2,y) * (1 - 4 * this.getTauCobre()
                 -2 * this.getTauCobre()*( this.getBiot(true))))
         );
-        return value;
     }
 
     public double getT_ESQ_INF_DER_COB(int segundo){
-        double value = (2 * this.getTauCobre()
+        return (2 * this.getTauCobre()
                 * ((snapshot.get(segundo-1).getValue((Constantes.getCANT_NODOS_X()/2)-1,Constantes.getCANT_NODOS_Y()-1))
                 + 2 * Constantes.getTEMP_INF() * (Constantes.getCOEF_CONV()*Constantes.getDIST_NODAL())/Constantes.getCOND_TERM_COBR()
                 + (snapshot.get(segundo-1).getValue((Constantes.getCANT_NODOS_X()/2),Constantes.getCANT_NODOS_Y()-2))
@@ -132,11 +125,10 @@ public class Principal {
                 + (snapshot.get(segundo-1).getValue(Constantes.getCANT_NODOS_X()/2,Constantes.getCANT_NODOS_Y()-1) * (1 - 4 * this.getTauCobre()
                 -4 * this.getTauCobre()*( this.getBiot(true))))
         );
-        return value;
     }
 
     public double getT_ESQ_SUP_IZQ_ACER(int segundo){
-        double value = (2 * this.getTauAcero()
+        return (2 * this.getTauAcero()
                 * ((snapshot.get(segundo-1).getValue((Constantes.getCANT_NODOS_X()/2)+2,0))
                 + 2 * Constantes.getTEMP_INF() * (Constantes.getCOEF_CONV()*Constantes.getDIST_NODAL())/Constantes.getCOND_TERM_ACER()
                 + (snapshot.get(segundo-1).getValue((Constantes.getCANT_NODOS_X()/2)+1,1))
@@ -144,11 +136,10 @@ public class Principal {
                 + (snapshot.get(segundo-1).getValue((Constantes.getCANT_NODOS_X()/2)+1,0) * (1 - 4 * this.getTauAcero()
                 -4 * this.getTauAcero()*( this.getBiot(false))))
         );
-        return value;
     }
 
     public double getT_BORD_IZQ_ACER(int segundo, int y){
-        double value = (this.getTauAcero()
+        return (this.getTauAcero()
                 * ((snapshot.get(segundo-1).getValue((Constantes.getCANT_NODOS_X()/2)+1,y-1))
                 + 2 * (snapshot.get(segundo-1).getValue((Constantes.getCANT_NODOS_X()/2)+2,y))
                 + (snapshot.get(segundo-1).getValue((Constantes.getCANT_NODOS_X()/2)+1,y+1))
@@ -156,11 +147,10 @@ public class Principal {
                 + (snapshot.get(segundo-1).getValue((Constantes.getCANT_NODOS_X()/2)+1,y) * (1 - 4 * this.getTauAcero()
                 -2 * this.getTauAcero()*( this.getBiot(false))))
         );
-        return value;
     }
 
     public double getT_ESQ_IZQ_INF_ACER(int segundo){
-        double value = (2 * this.getTauAcero()
+        return (2 * this.getTauAcero()
                 * ((snapshot.get(segundo-1).getValue((Constantes.getCANT_NODOS_X()/2)+2,Constantes.getCANT_NODOS_Y()-1))
                 + 2 * Constantes.getTEMP_INF() * (Constantes.getCOEF_CONV()*Constantes.getDIST_NODAL())/Constantes.getCOND_TERM_ACER()
                 + (snapshot.get(segundo-1).getValue((Constantes.getCANT_NODOS_X()/2)+1,Constantes.getCANT_NODOS_Y()-2))
@@ -168,11 +158,10 @@ public class Principal {
                 + (snapshot.get(segundo-1).getValue((Constantes.getCANT_NODOS_X()/2)+1,Constantes.getCANT_NODOS_Y()-1) * (1 - 4 * this.getTauAcero()
                 -4 * this.getTauAcero()*( this.getBiot(false))))
         );
-        return value;
     }
 
     public double getT_BORD_SUP_ACER(int segundo, int x){
-        double value = (this.getTauAcero()
+        return (this.getTauAcero()
                 * ((snapshot.get(segundo-1).getValue(x-1,0))
                 + (snapshot.get(segundo-1).getValue(x+1,0))
                 + 2 * (snapshot.get(segundo-1).getValue(x,1))
@@ -180,12 +169,10 @@ public class Principal {
                 + (snapshot.get(segundo-1).getValue(x,0) * (1 - 4 * this.getTauAcero()
                 -2*this.getTauAcero()*(Constantes.getCOEF_CONV()*Constantes.getDIST_NODAL())/Constantes.getCOND_TERM_ACER()))
         );
-
-        return value;
     }
 
     public double getT_CENT_ACER(int segundo, int x, int y){
-        double value = (this.getTauAcero()
+        return (this.getTauAcero()
                 * ((snapshot.get(segundo-1).getValue(x,y-1))
                 + (snapshot.get(segundo-1).getValue(x+1,y))
                 + (snapshot.get(segundo-1).getValue(x,y+1))
@@ -193,11 +180,10 @@ public class Principal {
                 + (snapshot.get(segundo-1).getValue(x,y)
                 * (1 - 4 * this.getTauAcero()))
         );
-        return value;
     }
 
     public double getT_BORD_INF_ACER(int segundo,int x){
-        double value = (this.getTauAcero()
+        return (this.getTauAcero()
                 * (2*(snapshot.get(segundo-1).getValue(x,Constantes.getCANT_NODOS_Y()-2))
                 + (snapshot.get(segundo-1).getValue(x-1,Constantes.getCANT_NODOS_Y()-1))
                 + (snapshot.get(segundo-1).getValue(x+1,Constantes.getCANT_NODOS_Y()-1))
@@ -205,24 +191,20 @@ public class Principal {
                 + (snapshot.get(segundo-1).getValue(x,Constantes.getCANT_NODOS_Y()-1) * (1 - 4 * this.getTauAcero()
                 -2*this.getTauAcero()*(Constantes.getCOEF_CONV()*Constantes.getDIST_NODAL())/Constantes.getCOND_TERM_ACER()))
         );
-
-        return value;
     }
 
     public double getT_ESQ_SUP_DER_ACER(int segundo){
-        double value = (2 * this.getTauAcero()
+        return (2 * this.getTauAcero()
                 * ((snapshot.get(segundo-1).getValue(Constantes.getCANT_NODOS_X()-2,0))
                 + (snapshot.get(segundo-1).getValue(Constantes.getCANT_NODOS_X()-1,1))
                 + 2 * Constantes.getTEMP_INF() * (Constantes.getCOEF_CONV()*Constantes.getDIST_NODAL())/Constantes.getCOND_TERM_ACER())
                 + (snapshot.get(segundo-1).getValue(Constantes.getCANT_NODOS_X()-1,0) * (1 - 4 * this.getTauAcero()
                 -4*this.getTauAcero()*(Constantes.getCOEF_CONV()*Constantes.getDIST_NODAL())/Constantes.getCOND_TERM_ACER()))
         );
-
-        return value;
     }
 
     public double getT_BORD_DER_ACER(int segundo, int y){
-        double value = (this.getTauAcero()
+        return (this.getTauAcero()
                 * (2*(snapshot.get(segundo-1).getValue(Constantes.getCANT_NODOS_X()-2,y))
                 + (snapshot.get(segundo-1).getValue(Constantes.getCANT_NODOS_X()-1,y+1)) +
                 (snapshot.get(segundo-1).getValue(Constantes.getCANT_NODOS_X()-1,y-1))
@@ -230,18 +212,16 @@ public class Principal {
                 + (snapshot.get(segundo-1).getValue(Constantes.getCANT_NODOS_X()-1,y) * (1 - 4 * this.getTauAcero()
                 -2*this.getTauAcero()*(Constantes.getCOEF_CONV()*Constantes.getDIST_NODAL())/Constantes.getCOND_TERM_ACER()))
         );
-        return value;
     }
 
     public double getT_ESQ_INF_DER_ACER(int segundo){
-        double value = (2 * this.getTauAcero()
+        return (2 * this.getTauAcero()
                 * ((snapshot.get(segundo-1).getValue(Constantes.getCANT_NODOS_X()-1,Constantes.getCANT_NODOS_Y()-2))
                 + (snapshot.get(segundo-1).getValue(Constantes.getCANT_NODOS_X()-2,Constantes.getCANT_NODOS_Y()-1))
                 + 2 * Constantes.getTEMP_INF() * (Constantes.getCOEF_CONV()*Constantes.getDIST_NODAL())/Constantes.getCOND_TERM_ACER())
                 + (snapshot.get(segundo-1).getValue(Constantes.getCANT_NODOS_X()-1,Constantes.getCANT_NODOS_Y()-1) * (1 - 4 * this.getTauAcero()
                 -4*this.getTauAcero()*(Constantes.getCOEF_CONV()*Constantes.getDIST_NODAL())/Constantes.getCOND_TERM_ACER()))
         );
-        return value;
     }
 
     public void aplicaFormulas(int deltaT){
@@ -288,18 +268,23 @@ public class Principal {
         }
     }
 
+    public void iterar(int veces){
+        for (int i = 1; i <= veces; i++) {
+            snapshot.add(new Placa());
+            aplicaFormulas(i);
+        }
+    }
+
+    public double getNodoTiempo(int x, int y, int iteracion){
+        iterar(iteracion);
+        return snapshot.get(iteracion).getValue(x,y);
+    }
+
     public static void main(String[] args) {
         Principal principal = new Principal();
-        principal.snapshot.add(new Placa());
-        principal.aplicaFormulas(1);
-        principal.imprimirSnapshot(1);
-        System.out.println("---------------------");
-        principal.snapshot.add(new Placa());
-        principal.aplicaFormulas(2);
-        principal.imprimirSnapshot(2);
-        System.out.println("---------------------");
-        principal.snapshot.add(new Placa());
-        principal.aplicaFormulas(3);
-        principal.imprimirSnapshot(3);
+        int x = 150;
+        int y = 43;
+        int iteracion = 1000;
+        JOptionPane.showMessageDialog(null,"Temperatura del nodo x:"+x+", y:"+y+" tiempo: "+iteracion+" es "+principal.getNodoTiempo(150,43,1000)+" K");
     }
 }
