@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7a2e01d-e2f7-4b9e-bc94-ea99dc78eef7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/ucr/Placa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ucr/Constantes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ucr/Constantes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ucr/Placa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ucr/Placa.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/ucr/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ucr/Principal.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -37,8 +35,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/ucr/Principal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="120" column="49" lean-forward="true" selection-start-line="120" selection-start-column="49" selection-end-line="120" selection-end-column="49" />
+            <state relative-caret-position="521">
+              <caret line="275" lean-forward="true" selection-start-line="275" selection-end-line="275" />
             </state>
           </provider>
         </entry>
@@ -46,13 +44,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/ucr/Placa.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="46" column="94" selection-start-line="46" selection-start-column="94" selection-end-line="46" selection-end-column="94" />
+            <state relative-caret-position="660">
+              <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
               <folding>
                 <element signature="e#360#361#0" expanded="true" />
                 <element signature="e#400#401#0" expanded="true" />
                 <element signature="e#458#459#0" expanded="true" />
                 <element signature="e#506#507#0" expanded="true" />
+                <element signature="e#548#549#0" expanded="true" />
+                <element signature="e#600#601#0" expanded="true" />
+                <element signature="e#1486#1487#0" expanded="true" />
+                <element signature="e#1587#1588#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -70,6 +72,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>LARGO_COBRE</find>
+      <find>getT_BORD_IZQ_COB</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -79,8 +82,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/com/ucr/Main.java" />
-        <option value="$PROJECT_DIR$/src/com/ucr/Placa.java" />
         <option value="$PROJECT_DIR$/src/com/ucr/Constantes.java" />
+        <option value="$PROJECT_DIR$/src/com/ucr/Placa.java" />
         <option value="$PROJECT_DIR$/src/com/ucr/Principal.java" />
       </list>
     </option>
@@ -222,19 +225,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ucr/Placa.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="46" column="94" selection-start-line="46" selection-start-column="94" selection-end-line="46" selection-end-column="94" />
-          <folding>
-            <element signature="e#360#361#0" expanded="true" />
-            <element signature="e#400#401#0" expanded="true" />
-            <element signature="e#458#459#0" expanded="true" />
-            <element signature="e#506#507#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ucr/Constantes.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
@@ -248,10 +238,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ucr/Placa.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+          <folding>
+            <element signature="e#360#361#0" expanded="true" />
+            <element signature="e#400#401#0" expanded="true" />
+            <element signature="e#458#459#0" expanded="true" />
+            <element signature="e#506#507#0" expanded="true" />
+            <element signature="e#548#549#0" expanded="true" />
+            <element signature="e#600#601#0" expanded="true" />
+            <element signature="e#1486#1487#0" expanded="true" />
+            <element signature="e#1587#1588#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ucr/Principal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="120" column="49" lean-forward="true" selection-start-line="120" selection-start-column="49" selection-end-line="120" selection-end-column="49" />
+        <state relative-caret-position="521">
+          <caret line="275" lean-forward="true" selection-start-line="275" selection-end-line="275" />
         </state>
       </provider>
     </entry>
