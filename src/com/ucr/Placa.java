@@ -7,7 +7,7 @@ public class Placa {
     public void printer(){
         for (double[] doubles : this.matriz) {
             for (int j = 0; j < doubles.length; j++) {
-                System.out.print(doubles[j] + " ");
+                System.out.print(String.format("%.3f", doubles[j])+ " ");
             }
             System.out.println();
         }
