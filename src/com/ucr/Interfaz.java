@@ -7,6 +7,10 @@ public class Interfaz extends JDialog {
     private JPanel contentPane;
     private JButton buttonOK;
     private JButton buttonCancel;
+    private JButton parametrosButton;
+    private JTextField iteraciones;
+    private JTextField y_txt;
+    private JTextField x_txt;
 
 
     public Interfaz() {
@@ -40,10 +44,22 @@ public class Interfaz extends JDialog {
                 onCancel();
             }
         }, KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
+        parametrosButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                Params dialog = new Params();
+                dialog.pack();
+                dialog.setVisible(true);
+            }
+        });
     }
 
     private void onOK() {
         // add your code here
+        int i = Integer.valueOf(this.iteraciones.getText());
+        int x = Integer.valueOf(this.x_txt.getText());
+        int y = Integer.valueOf(this.y_txt.getText());
+        new PlacaGUI(x,y,i);
         dispose();
     }
 
@@ -56,6 +72,9 @@ public class Interfaz extends JDialog {
         Interfaz dialog = new Interfaz();
         dialog.pack();
         dialog.setVisible(true);
-        System.exit(0);
+    }
+
+    private void createUIComponents() {
+        // TODO: place custom component creation code here
     }
 }

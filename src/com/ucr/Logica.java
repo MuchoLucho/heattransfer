@@ -1,13 +1,12 @@
 package com.ucr;
 
-import javax.swing.*;
 import java.util.ArrayList;
 
-public class Principal {
+public class Logica {
 
     private ArrayList <Placa> snapshot; //snapshot por segundo(s)
 
-    public Principal() {
+    public Logica() {
         snapshot = new ArrayList<>();
         snapshot.add(new Placa());
         snapshot.get(0).placaSegundo0();
@@ -15,6 +14,10 @@ public class Principal {
 
     public void imprimirSnapshot(){
         this.snapshot.get(0).printer();
+    }
+
+    public double[][] getSnapshot(){
+        return this.snapshot.get(0).getPlaca();
     }
 
     public double getTauAcero(){
@@ -273,8 +276,6 @@ public class Principal {
         for (int i = 1; i <= veces; i++) {
             snapshot.add(new Placa());
             aplicaFormulas();
-            //snapshot.get(1).printer();
-            //System.out.println(snapshot.size());
             snapshot.remove(0);
         }
     }
@@ -284,12 +285,12 @@ public class Principal {
         return snapshot.get(0).getValue(x,y);
     }
 
-    public static void main(String[] args) {
-        Principal principal = new Principal();
-        int x = 150;
-        int y = 43;
-        int iteracion = 200000;
-        JOptionPane.showMessageDialog(null,"Temperatura del nodo x:"+x+", y:"+y+" tiempo: "+iteracion+" es "+principal.getNodoTiempo(x,y,iteracion)+" K");
-        principal.imprimirSnapshot();
-    }
+//    public static void main(String[] args) {
+//        Logica logica = new Logica();
+//        int x = 150;
+//        int y = 43;
+//        int iteracion = 100;
+//        JOptionPane.showMessageDialog(null,"Temperatura del nodo x:"+x+", y:"+y+" tiempo: "+iteracion+" es "+ logica.getNodoTiempo(x,y,iteracion)+" K");
+//        logica.imprimirSnapshot();
+//    }
 }

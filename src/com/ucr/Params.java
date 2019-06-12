@@ -14,7 +14,6 @@ public class Params extends JDialog {
     private JTextField tempAceIzq_txt;
     private JTextField tempAceCent_txt;
     private JTextField tempAceDer_txt;
-    private JTextField tiempo_txt;
     private JLabel ladoPlaca;
     private JLabel distNodal;
     private JLabel tempInf;
@@ -22,7 +21,6 @@ public class Params extends JDialog {
     private JPanel tempAcero;
     private JLabel tempAceCent;
     private JLabel tempAceDer;
-    private JLabel tiempo;
     private JLabel tempAceIzq;
 
     public Params() {
@@ -66,7 +64,6 @@ public class Params extends JDialog {
         Constantes.setTEMP_ACER_IZQ(Double.valueOf(tempAceIzq_txt.getText()));
         Constantes.setTEMP_ACER_CENT(Double.valueOf(tempAceCent_txt.getText()));
         Constantes.setTEMP_ACER_DER(Double.valueOf(tempAceDer_txt.getText()));
-        Constantes.setTIEMPO(Integer.valueOf(tiempo_txt.getText()));
         dispose();
     }
 
@@ -74,10 +71,10 @@ public class Params extends JDialog {
         dispose();
     }
 
-    public static void main(String[] args) {
-        Params dialog = new Params();
-        dialog.pack();
-        dialog.setVisible(true);
-        System.exit(0);
-    }
+//    public static void main(String[] args) {
+//        Params dialog = new Params();
+//        dialog.pack();
+//        dialog.setVisible(true);
+//        System.exit(0);
+//    }
 }

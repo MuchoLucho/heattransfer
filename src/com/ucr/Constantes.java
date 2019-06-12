@@ -15,8 +15,8 @@ public class Constantes {
     private static int COND_TERM_COBR = 401;
     private static double COND_TERM_ACER = 63.9;
     private static int TIEMPO = 20;
-    private static double DELTA_T_COBRE = 0.000053417937;
-    private static double DELTA_T_ACERO = 0.000332412995;
+    private static double DELTA_T_COBRE = 0.000059;
+    private static double DELTA_T_ACERO = 0.00039;
 
     public static double getDeltaTCobre() {
         return DELTA_T_COBRE;

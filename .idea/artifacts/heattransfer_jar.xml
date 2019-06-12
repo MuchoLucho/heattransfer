@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="heattransfer:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/heattransfer_jar</output-path>
+    <root id="archive" name="heattransfer.jar">
+      <element id="module-output" name="heattransfer" />
+    </root>
+  </artifact>
+</component>

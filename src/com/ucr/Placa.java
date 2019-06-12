@@ -40,6 +40,10 @@ class Placa {
         }
     }
 
+    public double[][] getPlaca(){
+        return this.matriz;
+    }
+
     Placa() {
         this.matriz = new double [Constantes.getCANT_NODOS_Y()][Constantes.getCANT_NODOS_X()];
     }
